@@ -1,4 +1,4 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: eDOCr
 Version: 0.0.4
 Summary: OCR for Engineering Mechanical Drawings
@@ -28,22 +28,23 @@ Requires-Dist: pyclipper
 Requires-Dist: efficientnet==1.0.0
 Requires-Dist: pytest
 Requires-Dist: pdf2image
+Dynamic: license-file
 
 # eDOCr
-
-eDOCr is a packaged version of [keras-ocr](https://github.com/faustomorales/keras-ocr) that facilitates end-to-end digitization of mechanical EDs. Developed for Windows OS and using Python as the primary programming language.
+## See the version 2 of eDOCr in its new repo [edocr2](https://github.com/javvi51/edocr2)
+eDOCr is a packaged version of [keras-ocr](https://github.com/faustomorales/keras-ocr) that facilitates end-to-end digitization of mechanical EDs. Developed for Windows OS and using Python as the primary programming language. The implementation is discussed in the researh paper [Optical character recognition on engineering drawings to achieve automation in production quality control](https://www.frontiersin.org/articles/10.3389/fmtec.2023.1154132/full) 
 
 ## Getting Started
 
 ### Installation
 
-`eDOCr` supports Python >= 3.6 and TensorFlow >= 2.0.0.
+`eDOCr` supports Python >= 3.6 and TensorFlow >= 2.0.0. The test environment I used is Python = 3.9 and Tensorflow = 2.10.1.
 Install your prefered distribution platform, [Anaconda](https://www.anaconda.com/products/distribution) is recommended.
 Open Anaconda Prompt and type the following commands:
 
 
 ```bash
-conda create -n edocr -y
+conda create -n edocr python=3.9 -y 
 conda activate edocr
 
 # To install from PyPi
@@ -175,3 +176,4 @@ pretrained_model = None
 train_recognizer.generate_n_train(alphabet, backgrounds, fonts, recognizer_basepath=recognizer_basepath, pretrained_model=pretrained_model)
 ```
 
+This work was supported by Vinnova (Sweden) under grant 2021-02481, iPROD project. The authors would like to thank Vinnova for making this research project possible.

@@ -4,15 +4,14 @@ ID,type,flag,nominal,value,tolerance,upper_bound,lower_bound
 3,Length,False,25,25,general,,
 4,Length,False,2,2,general,,
 5,Length,False,16,16,general,,
-6,Length,False,.9 0 -0.1,.9,,0,-0.1
-7,Length,False,15,15,general,,
-8,Length,False,1.6,1.6,general,,
-9,Length,False,0.8,0.8,general,,
-10,Length,True,1.6,1.6,general,,
-11,Thread,False,M8,M8,,,
-12,Length,False,20,20,general,,
-13,Length,False,2xR0.15,2xR0.15,general,,
-14,Length,True,16.5 +0.1 0,16.5,,+0.1,0
-15,Length,True,2x⌀19.,2x⌀19.,general,,
-16,Length,False,2xR0.2,2xR0.2,general,,
-17,Length,True,".G""2",".G""2",general,,
+6,Length,False,15,15,general,,
+7,Length,False,1.6,1.6,general,,
+8,Length,False,0.8,0.8,general,,
+9,Length,True,1.6,1.6,general,,
+10,Thread,False,M8,M8,,,
+11,Length,False,20,20,general,,
+12,Length,False,2xR0.15,2xR0.15,general,,
+13,Length,False,16.5 +0.1 0,16.5,,+0.1,0
+14,Length,True,2x⌀19.9 0 n.1,2x⌀19.9,,0,n.1
+15,Length,False,2xR0.2,2xR0.2,general,,
+16,Length,False,2.5 +0.2 0,2.5,,+0.2,0

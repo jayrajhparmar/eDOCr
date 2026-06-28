@@ -38,9 +38,13 @@ def get_frame(image,thres=0.7):
                         if w*h<0.98*image.shape[0]*image.shape[1]:
                             b={'x':x,'y':y,'w':w,'h':h,'size':w*h}
                             boxes.append(b)                    
-        box=sorted(boxes, key=lambda x: x['size'], reverse=True)[0]
-        crop_img=image[box['y']:box['y']+box['h'],box['x']:box['x']+box['w']]
-        cl_frame=rect('rect_frame',box['x'],box['y'],box['w'],box['h'],crop_img,'fire')
+        if len(boxes) > 0:
+            box=sorted(boxes, key=lambda x: x['size'], reverse=True)[0]
+            crop_img=image[box['y']:box['y']+box['h'],box['x']:box['x']+box['w']]
+            cl_frame=rect('rect_frame',box['x'],box['y'],box['w'],box['h'],crop_img,'fire')
+        else:
+            crop_img=image[0:0+image.shape[0],0:0+image.shape[1]]
+            cl_frame=rect('rect_frame',0,0,image.shape[1],image.shape[0],crop_img,'fire')
     else:
         crop_img=image[0:0+image.shape[0],0:0+image.shape[1]]
         cl_frame=rect('rect_frame',0,0,image.shape[1],image.shape[0],crop_img,'fire')

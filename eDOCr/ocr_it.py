@@ -69,7 +69,7 @@ filename=os.path.splitext(os.path.basename(args.file_path))[0]
 ###############################################################
 #pdf to image
 if os.path.splitext(args.file_path)[1]=='.pdf':
-    images = convert_from_path(args.file_path)
+    images = convert_from_path(args.file_path, dpi=300)
 else:
     images=[cv2.imread(args.file_path)]
 

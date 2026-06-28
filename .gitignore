@@ -8,3 +8,17 @@ dist
 __pycache__
 versioneer.pyc
 .vscode
+.cache/
+Results/
+cleaned_dataset/
+full_training_dataset/
+full_training_dataset_backup/
+sample_dataset/
+hybrid_batch_results/
+hybrid_test_results/
+trained_model/
+trocr-small/
+poppler.zip
+poppler/
+tmp/
+*.log

@@ -299,6 +299,7 @@ def build_model(
         rnn_units[0],
         kernel_initializer="he_normal",
         return_sequences=True,
+        recurrent_dropout=0.0001,
         name="lstm_10",
     )(x)
     rnn_1_back = keras.layers.LSTM(
@@ -306,6 +307,7 @@ def build_model(
         kernel_initializer="he_normal",
         go_backwards=True,
         return_sequences=True,
+        recurrent_dropout=0.0001,
         name="lstm_10_back",
     )(x)
     rnn_1_add = keras.layers.Add()([rnn_1_forward, rnn_1_back])
@@ -313,6 +315,7 @@ def build_model(
         rnn_units[1],
         kernel_initializer="he_normal",
         return_sequences=True,
+        recurrent_dropout=0.0001,
         name="lstm_11",
     )(rnn_1_add)
     rnn_2_back = keras.layers.LSTM(
@@ -320,6 +323,7 @@ def build_model(
         kernel_initializer="he_normal",
         go_backwards=True,
         return_sequences=True,
+        recurrent_dropout=0.0001,
         name="lstm_11_back",
     )(rnn_1_add)
     x = keras.layers.Concatenate()([rnn_2_forward, rnn_2_back])
